@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:paddingStart="5dp"
+    android:paddingEnd="5dp"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivCastCrewMember"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ryan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        app:layout_constraintEnd_toEndOf="parent"
+        android:gravity="center"
+        android:id="@+id/tvNameOfCastCrewMember"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="Ryan Gosling"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivCastCrewMember" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

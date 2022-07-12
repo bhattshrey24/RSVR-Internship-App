@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iV_TopImage"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/black"
+            android:scaleType="centerCrop"
+            android:src="@drawable/deadpool"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="-30dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/heart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iV_TopImage" />
+
+        <TextView
+            android:textColor="@color/blue"
+            android:id="@+id/tvReadMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="Read More"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/postTopImageLayout" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMovieTrailers"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="40dp"
+            android:scrollbars="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/iV_TopImage"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:listitem="@layout/movie_trailor_list_item" />
+
+        <include
+            android:id="@+id/postTopImageLayout"
+            layout="@layout/post_top_image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iV_TopImage" />
+
+        <include
+            android:id="@+id/castCrewLayout"
+            layout="@layout/cast_crew_layout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintTop_toBottomOf="@+id/tvReadMore" />
+
+        <include
+            android:layout_marginTop="10dp"
+            android:id="@+id/similarMoviesLayout"
+            layout="@layout/similar_movie_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/castCrewLayout" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
