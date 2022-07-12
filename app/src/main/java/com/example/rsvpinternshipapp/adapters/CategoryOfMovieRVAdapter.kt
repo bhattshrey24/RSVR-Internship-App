@@ -12,9 +12,9 @@ class CategoryOfMovieRVAdapter() : RecyclerView.Adapter<CategoryOfMovieRVAdapter
 
 
     val list = listOf<Pair<String, Int>>(
-        "Comedy" to Color.BLUE,
         "Action" to Color.RED,
-        "Adventure" to Color.MAGENTA,
+        "Comedy" to Color.CYAN,
+        "Adventure" to Color.BLUE
     )
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
